@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Safia Abdalla         -- Project Manager    -- http://safia.rocks
+    Fabricio Rosa Marques -- Designer           -- http://fabric8.de
+    Thomas Osmonson       -- Frontend Developer -- http://ineffable.co
+
+# THANKS
+
+    Plotly                -- https://plot.ly/
+    Domino Data Lab       -- https://www.dominodatalab.com/
+    Carina                -- https://getcarina.com/
+
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3/SCSS, JavaScript
+    Jekyll, Lanyon/Poole, HTML5 Boilerplate
+    Yeoman, Jekyllized
