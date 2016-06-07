@@ -1,0 +1,66 @@
+// ---------------------------------------------------------------------------------------------------------------------
+//   nteract
+//   --
+//   Abstract Styles
+//   variables, mixins, etc
+
+// Typography ----------------------------------------------------------------------------------------------------------
+
+
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+$base-font-family:    "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font-family:    "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:      16px;
+$base-font-weight:    400;
+$small-font-size:     $base-font-size * 0.875;         // 14px
+$large-font-size:     $base-font-size * 1.875;         // 30px
+$base-line-height:    1.5;
+$font-weight-light: 300;
+
+
+$border: 1px solid darken(whitesmoke, 8%);
+
+
+// Sizing Units --------------------------------------------------------------------------------------------------------
+
+$unit:                10px;                            // Base unit for all margins / padding { e.g.: $unit*2 }
+$max-width:           960px;                          // max width size
+
+// Colors --------------------------------------------------------------------------------------------------------------
+
+
+$color--text:                     #5e779a;
+$color--text-body:                #334865;
+$color--text-light:               #ffffff;
+$color--text-light-muted:         #c8d4e5;
+
+$color--link:                     #f02563;
+$color--link-hover:               #f21860;
+
+$fill--grey-blue-dark:            #334865;
+$fill--grey-button:               rgba(163, 183, 213, 0.15);
+$fill--grey-light:                #edf1f7;
+
+$gradient--magenta:  linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), linear-gradient(#f02563, #f02563);
+
+  // Effects -------------------------------------------------------------------------------------------------------------
+
+$trans: 0.18s all ease-in-out;
+$box-shadow: 0 4px 8px 0 rgba(50, 72, 101, 0.1), 0 2px 2px 0 rgba(50, 72, 101, 0.1);
+$box-shadow--hover: 0 4px 8px 0 rgba(50, 72, 101, 0.1), 0 2px 2px 0 rgba(50, 72, 101, 0.1);
+$box-shadow-large: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$box-shadow-med: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+
+
+// UI ------------------------------------------------------------------------------------------------------------------
+
+::selection {
+  background: $color--link; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: $color--link; /* Gecko Browsers */
+  color: white;
+}

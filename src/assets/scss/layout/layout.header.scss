@@ -1,0 +1,152 @@
+header.header {
+  &--main {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+
+    transition: $trans;
+    border-color: transparent;
+
+    @include handheld{
+      position: absolute;
+    }
+    img {
+      display: block;
+    }
+    img.dark {
+      display: none;
+    }
+    &.logo-dark {
+      background: white;
+      border-bottom: $border;
+
+      [class*='button__secondary'] {
+        background: $fill--grey-blue-dark;
+
+      }
+      img.white {
+        display: none;
+      }
+      img.dark {
+        display: block;
+      }
+    }
+    .identity {
+      max-width: 150px;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .wrapper--header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      //padding: 0 $unit*2;
+      max-width: $max-width;
+      margin: 0 auto;
+      @include tablet {
+        padding:0 $unit*4;
+      }
+
+      @include handheld{
+        justify-content:center;
+        padding:$unit*4 0;
+        nav{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  padding: $unit*2;
+  padding-right: 0;
+}
+
+[class*='button'] {
+  .wrapper--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(20px);
+}
+
+.animate-content {
+  opacity: 1;
+  transform: none;
+}
+
+[class*='button__secondary'] {
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-radius: $unit/2;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1) !important;
+  padding: $unit/2 $unit*2;
+  box-shadow: $box-shadow--hover;
+
+  &:hover {
+    box-shadow: $box-shadow-large;
+  }
+
+  .icon {
+    margin-right: $unit/2;
+    svg {
+
+      $size: 18px;
+      height: $size !important;
+      width: $size !important;
+    }
+    path {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);;
+    }
+    * {
+      fill: currentColor;
+    }
+
+  }
+}
+
+.button {
+  &__secondary {
+    &--dark {
+      background: rgba(163, 183, 213, 0.15);
+      color: $color--text-light-muted;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        background: rgba(163, 183, 213, 0.35);
+        color: white;
+      }
+    }
+    &--white {
+      background: white;
+      color: $color--text;
+      &:hover {
+        background: lighten($fill--grey-light, 2%);
+        color: $color--text;
+      }
+    }
+  }
+}
+
+[class*='button'] + [class*='button'] {
+  margin-left: $unit*2;
+}
+
+header.header--main {
+  //display: none;
+
+}

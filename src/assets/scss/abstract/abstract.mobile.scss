@@ -1,0 +1,74 @@
+// ---------------------------------------------------------------------------------------------------------------------
+//   Plotly
+//   --
+//   Mobile Styles
+//   variables, mixins, etc
+
+// Variables -----------------------------------------------------------------------------------------------------------
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-header: 885px;
+
+$breakpoint-wrapper: 1380px;
+
+$breakpoint-large-display: 1600px;
+
+// Mixins --------------------------------------------------------------------------------------------------------------
+
+@mixin handheld {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin handheld-up {
+  @media (min-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+@mixin wrapper {
+  @media (max-width: #{$breakpoint-wrapper - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+@mixin tablet-up {
+  @media (min-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-header {
+  @media (max-width: #{$breakpoint-header - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin large-display {
+  @media (min-width: #{$breakpoint-large-display}) {
+    @content;
+  }
+}
+
+.mobile-only{
+  display: none !important;
+  @include handheld{
+    display: block !important;
+  }
+}
+.not-mobile{
+  @include handheld{
+    display: none;
+  }
+}

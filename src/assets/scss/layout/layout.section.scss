@@ -1,0 +1,363 @@
+.page--body {
+  position: relative;
+  z-index: 99;
+}
+a{
+  color: $color--link;
+  text-decoration: none;
+  &:hover{
+    color: $color--link-hover;
+    text-decoration: underline;
+  }
+}
+section {
+
+  // Hero
+
+  &.hero {
+    min-height: 574px;
+    background: $fill--grey-blue-dark;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+
+    @include handheld {
+      min-height: 100vh;
+    }
+
+    .hero--fun {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+
+      min-height: 574px;
+      display: flex;
+      align-items: flex-end;
+
+      @include handheld {
+        min-height: 100vh;
+      }
+      margin: 0 auto;
+      .hero--scene {
+        max-width: $max-width;
+        margin: 0 auto;
+        @include handheld {
+          min-height: 100vh;
+        }
+      }
+
+      .video--wrap {
+        @include handheld {
+          max-width: 80vw;
+        }
+      }
+      .video {
+        @include desktop {
+          max-width: 420px;
+          width: 420px;
+          position: absolute !important;
+          right: 0 !important;
+          left: inherit !important;
+          bottom: 0 !important;
+          top: inherit !important;
+        }
+
+        @include handheld {
+          max-width: 100%;
+
+          display: none !important;
+
+        }
+
+        @include wrapper {
+        }
+        video {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      img.layer {
+        max-width: 1440px;
+        left: -250px !important;
+      }
+      .layer {
+        max-width: 100%;
+        height: auto !important;
+        position: absolute;
+        top: 0;
+      }
+    }
+    .wrapper--section {
+      background-size: cover;
+      @include wrapper {
+
+      }
+
+      display: flex;
+      max-width: $max-width;
+      width: 100%;
+      margin: 0 auto;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+      .application-image {
+        display: none;
+      }
+      @include tablet {
+        align-items: center;
+        flex-direction: column;
+        margin-top: 105px;
+        .application-image {
+          display: block;
+          padding: 0 $unit*4;
+          padding-top: $unit*4;
+        }
+        img {
+          max-width: 100%;
+          display: block;
+        }
+      }
+
+      .heading--main {
+        color: white;
+        font-family: $heading-font-family;
+        font-weight: 300;
+        font-size: 2rem;
+        max-width: 475px;
+        padding-right: $unit;
+      }
+
+      article.content {
+        @include desktop {
+          position: fixed;
+          top: 140px;
+          z-index: 2;
+          max-width: 475px;
+          padding: $unit*4 0;
+        }
+        @include tablet {
+          padding: 0 $unit*4;
+        }
+        @include tablet {
+        }
+        .supplemental {
+          color: $color--text-light-muted;
+          font-size: 0.85rem;
+          a {
+            color: $color--text-light-muted;
+            &:hover {
+              text-decoration: none;
+              opacity: 0.5;
+            }
+          }
+        }
+        p {
+          color: $color--text-light;
+          line-height: 1.75;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.filler {
+  background: white;
+  position: relative;
+  z-index: 3;
+}
+
+.wrapper--section {
+
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flex--inline {
+  display: flex;
+}
+
+.buttons {
+  padding: 0 0 $unit 0;
+
+  @include handheld{
+    &.mobile-only{
+      width: 100%;
+      margin:$unit*2 0;
+      padding:0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  [class*="button__primary"] {
+    background-color: $color--link;
+    background-image: $gradient--magenta;
+    display: inline-block;
+    padding: $unit;
+    border-radius: 4px;
+    transition: $trans;
+    box-shadow: $box-shadow;
+    padding-right: $unit*3;
+    color: white;
+    text-decoration: none;
+    @include handheld{
+      max-width:48%;
+      margin:0;
+    }
+    .wrapper--button {
+      display: flex;
+      align-items: center;
+    }
+    .icon {
+      margin-left: $unit;
+      width: 40px;
+
+      margin-right: $unit;
+
+      svg{
+        path{
+          fill: currentColor;
+        }
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-3px);
+      box-shadow: $box-shadow-large;
+
+      .button-text {
+        opacity: 1;
+
+      }
+
+    }
+
+    .button-text {
+      transition: $trans;
+
+      font-family: $heading-font-family;
+      font-weight: 400;
+      opacity: 0.75;
+      color: white;
+      padding-right: $unit;
+
+    }
+
+  }
+
+  &--inline {
+    display: inline-block;
+
+    .icon {
+      &:first-of-type {
+        margin-left: $unit/2;
+      }
+      margin-left: $unit;
+    }
+  }
+
+}
+
+body {
+
+}
+
+section.content {
+  &--section {
+    background: white;
+    position: relative;
+    z-index: 999;
+
+    &:not(:first-of-type) {
+      .wrapper--section {
+        @include handheld {
+          border-top: $border;
+        }
+      }
+    }
+
+    .wrapper--section {
+      padding: $unit*4 0;
+      max-width: $max-width;
+      display: flex;
+      min-height: 518px;
+      align-items: center;
+      justify-content: space-between;
+
+      @include tablet {
+        padding: $unit*4;
+      }
+      @include handheld {
+        flex-direction: column;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+
+    .heading--main {
+      color: $color--text;
+      font-family: $heading-font-family;
+      font-weight: 400;
+      font-size: 2rem;
+      max-width: 475px;
+      padding-right: $unit;
+    }
+    .figure {
+      max-width: 48%;
+      @include handheld {
+        max-width: 100%;
+        order: 2 !important;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    article.content {
+      //position: fixed;
+      //top: 140px;
+      z-index: 2;
+      max-width: 48%;
+      padding: $unit*4 0;
+
+      @include handheld {
+        max-width: 100%;
+      }
+
+      @include tablet {
+      }
+      .supplemental {
+        color: $color--text-body;
+        font-size: 0.85rem;
+        a {
+          color: $color--text-light-muted;
+          &:hover {
+            text-decoration: none;
+            opacity: 0.5;
+          }
+        }
+      }
+      p {
+        color: $color--text-body;
+        line-height: 1.75;
+        font-weight: 300;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.headroom {
+  will-change: top;
+}
+
+.headroom--pinned {
+  top: 0 !important;
+}
+
+.headroom--unpinned {
+  top: -100px !important;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, $unit, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 2s;
+  opacity: 0;
+}
+
+[class*="easing"] {
+
+  transition: transform cubic-bezier(0.19, 1, 0.22, 1),
+  opacity cubic-bezier(0.19, 1, 0.22, 1),
+  background-color cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+[class*="--snap"] {
+  transition-duration: 0.75s, 0.75s, 0.75s;
+}
+
+[class*="--fast"] {
+  transition-duration: 1s, 1s, 1s;
+}
+
+[class*="--quick"] {
+  transition-duration: 1.35s, 1.35s, 1.35s;
+}
+
+[class*="--medium"] {
+  transition-duration: 1.75s, 1.75s, 1.75s;
+}
+
+[class*="--modal"] {
+  transition-duration: 1.5s, 0.35s, 0.35s;
+}
+
+[class*="--slow-2500ms"] {
+  transition-duration: 2.5s, 2.5s, 2.5s;
+}
+
+[class*="--slow-4s"] {
+  transition-duration: 4s, 4s, 4s;
+}
+
+.delay-075s {
+  transition-delay: 0.075s;
+}
+
+.button {
+  -webkit-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes bringUp {
+  from {
+    //opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    //opacity: 1;
+    transform: none;
+  }
+}
+
+main.page {
+  background: $fill--grey-blue-dark;
+}
+
+@keyframes fadeInUp-v {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+$animate--time-base: 2s;
+
+.animate--page-body {
+  //opacity:0;
+  background: $fill--grey-blue-dark;
+  animation: bringUp $animate--time-base/1.5 forwards cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.animate--hero-content {
+  opacity: 0;
+  animation: fadeInUp-v $animate--time-base forwards cubic-bezier(0.19, 1, 0.22, 1);
+  animation-delay: $animate--time-base/1.7;
+}
+
+.animate--video {
+  opacity: 0;
+  animation: fadeInUp-v $animate--time-base forwards cubic-bezier(0.19, 1, 0.22, 1);
+  animation-delay: $animate--time-base/1.7;
+}
+
+.animate--header {
+  opacity: 0;
+  animation: fadeInUp $animate--time-base/1.5 forwards cubic-bezier(0.19, 1, 0.22, 1);
+  animation-delay: $animate--time-base/2.8;
+}
+
+.animate-first-block {
+  @include desktop {
+    opacity: 0;
+    animation: fadeInUp-v 0.65s forwards ease-in-out;
+    animation-delay: $animate--time-base/1.2;
+  }
+}
