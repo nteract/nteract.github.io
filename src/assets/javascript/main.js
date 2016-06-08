@@ -1,73 +1,63 @@
 $(document).ready(function () {
-  // jQuery Selections
-  var scene = $('.hero--scene');
 
-// Pretty simple huh?
+  function checkHeaderLocation() {
+    var top_of_object = $('.page--body').offset().top - 72;
+    var top_of_window = $(window).scrollTop();
+
+    return top_of_object < top_of_window;
+  }
+
+  function fadeHeaderIn() {
+    $(".header--main").addClass("logo-dark");
+  }
+
+  function fadeHeaderOut() {
+    $(".header--main").removeClass("logo-dark");
+  }
+
+  function isContentVisible(element) {
+    var bottom_of_object = element.offset().top + element.outerHeight() - 400;
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+    return bottom_of_window > bottom_of_object;
+  }
+
+
+  $(window).scroll(function () {
+
+    if (checkHeaderLocation()) {
+      fadeHeaderIn();
+    } else {
+      fadeHeaderOut();
+    }
+
+    $('.hidden').each(function (i) {
+      if (isContentVisible($(this))) {
+        $(this).addClass("animate-content");
+      }
+    });
+
+  });
+
+
+  // Init
+  if (checkHeaderLocation()) {
+    fadeHeaderIn();
+  } else {
+    fadeHeaderOut();
+  }
+
+  $('.hidden').each(function (i) {
+    if (isContentVisible($(this))) {
+      $(this).addClass("animate-content");
+    }
+  });
+
+  // Hero
+  var scene = $('.hero--scene');
   scene.parallax({
     invertX: false,
     limitY: 0
-  });
-
-
-  $('.hidden').each( function(i){
-
-    var bottom_of_object = $(this).offset().top + $(this).outerHeight() - 200;
-    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-    /* If the object is completely visible in the window, fade it it */
-    if( bottom_of_window > bottom_of_object ){
-
-      $(this).addClass("animate-content");
-
-    }
-
-  });
-
-
-  /* Every time the window is scrolled ... */
-  $(window).scroll( function(){
-
-    /* Check the location of each desired element */
-    $('.hidden').each( function(i){
-
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight() - 400;
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
-
-        $(this).addClass("animate-content");
-
-      }
-
-    });
-
-  });
-
-
-  /* Every time the window is scrolled ... */
-  $(window).scroll( function(){
-
-    /* Check the location of each desired element */
-    $('.page--body').each( function(i){
-
-      var top_of_object = $(this).offset().top - 72;
-      var top_of_window = $(window).scrollTop();
-
-      /* If the object is completely visible in the window, fade it it */
-      if( top_of_object < top_of_window ){
-
-        //$(this).addClass("");
-
-        $(".header--main").addClass("logo-dark");
-
-        console.log("This is hit the top")
-      } else {
-        $(".header--main").removeClass("logo-dark");
-      }
-
-    });
-
   });
 
 

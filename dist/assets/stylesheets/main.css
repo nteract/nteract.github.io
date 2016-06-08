@@ -481,6 +481,63 @@ main.page {
     animation: fadeInUp-v 0.65s forwards ease-in-out;
     animation-delay: 1.6666666667s; } }
 
+.buttons {
+  padding: 0 0 10px 0; }
+  @media (max-width: 767px) {
+    .buttons.mobile-only {
+      width: 100%;
+      margin: 20px 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; } }
+  .buttons [class*="button__primary"] {
+    background-color: #f02563;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), linear-gradient(#f02563, #f02563);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.18s all ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(50, 72, 101, 0.1), 0 2px 2px 0 rgba(50, 72, 101, 0.1);
+    padding-right: 30px;
+    color: white;
+    text-decoration: none; }
+    @media (max-width: 767px) {
+      .buttons [class*="button__primary"] {
+        max-width: 48%;
+        margin: 0; } }
+    .buttons [class*="button__primary"] .wrapper--button {
+      display: flex;
+      align-items: center; }
+    .buttons [class*="button__primary"] .icon {
+      margin-left: 10px;
+      width: 40px;
+      margin-right: 10px; }
+      .buttons [class*="button__primary"] .icon svg path {
+        fill: currentColor; }
+      .buttons [class*="button__primary"] .icon img {
+        max-width: 100%;
+        display: block; }
+    .buttons [class*="button__primary"]:hover {
+      cursor: pointer;
+      transform: translateY(-3px);
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); }
+      .buttons [class*="button__primary"]:hover .button-text {
+        opacity: 1; }
+    .buttons [class*="button__primary"] .button-text {
+      transition: 0.18s all ease-in-out;
+      font-family: "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      opacity: 0.75;
+      color: white;
+      padding-right: 10px; }
+  .buttons--inline {
+    display: inline-block; }
+    .buttons--inline .icon {
+      margin-left: 10px; }
+      .buttons--inline .icon:first-of-type {
+        margin-left: 5px; }
+
 header.header--main {
   position: fixed;
   top: 0;
@@ -750,63 +807,6 @@ section.hero {
 
 .flex--inline {
   display: flex; }
-
-.buttons {
-  padding: 0 0 10px 0; }
-  @media (max-width: 767px) {
-    .buttons.mobile-only {
-      width: 100%;
-      margin: 20px 0;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; } }
-  .buttons [class*="button__primary"] {
-    background-color: #f02563;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), linear-gradient(#f02563, #f02563);
-    display: inline-block;
-    padding: 10px;
-    border-radius: 4px;
-    transition: 0.18s all ease-in-out;
-    box-shadow: 0 4px 8px 0 rgba(50, 72, 101, 0.1), 0 2px 2px 0 rgba(50, 72, 101, 0.1);
-    padding-right: 30px;
-    color: white;
-    text-decoration: none; }
-    @media (max-width: 767px) {
-      .buttons [class*="button__primary"] {
-        max-width: 48%;
-        margin: 0; } }
-    .buttons [class*="button__primary"] .wrapper--button {
-      display: flex;
-      align-items: center; }
-    .buttons [class*="button__primary"] .icon {
-      margin-left: 10px;
-      width: 40px;
-      margin-right: 10px; }
-      .buttons [class*="button__primary"] .icon svg path {
-        fill: currentColor; }
-      .buttons [class*="button__primary"] .icon img {
-        max-width: 100%;
-        display: block; }
-    .buttons [class*="button__primary"]:hover {
-      cursor: pointer;
-      transform: translateY(-3px);
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); }
-      .buttons [class*="button__primary"]:hover .button-text {
-        opacity: 1; }
-    .buttons [class*="button__primary"] .button-text {
-      transition: 0.18s all ease-in-out;
-      font-family: "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 400;
-      opacity: 0.75;
-      color: white;
-      padding-right: 10px; }
-  .buttons--inline {
-    display: inline-block; }
-    .buttons--inline .icon {
-      margin-left: 10px; }
-      .buttons--inline .icon:first-of-type {
-        margin-left: 5px; }
 
 section.content--section {
   background: white;
