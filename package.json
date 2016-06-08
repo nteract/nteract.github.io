@@ -7,6 +7,11 @@
     "name": "nteract",
     "email": "aulneau@ineffable.co"
   },
+  "scripts": {
+    "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "node deploy.js"
+  },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
     "babel-core": "^6.5.0",
@@ -17,6 +22,7 @@
     "eslint": "^2.5.3",
     "eslint-config-xo": "^0.12.0",
     "eslint-config-xo-space": "^0.11.0",
+    "gh-pages": "^0.11.0",
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "gulp-cache": "^0.4.1",
     "gulp-concat": "^2.6.0",
