@@ -2,6 +2,12 @@
   position: relative;
   z-index: 99;
 }
+
+body{
+  @include tablet{
+    overflow-x: hidden;
+  }
+}
 a{
   color: $color--link;
   text-decoration: none;
@@ -65,7 +71,7 @@ section {
           top: inherit !important;
         }
 
-        @include handheld {
+        @include tablet {
           max-width: 100%;
 
           display: none !important;
@@ -103,6 +109,8 @@ section {
       align-items: flex-end;
       justify-content: space-between;
       width: 100%;
+      position: relative;
+      z-index:99;
       .application-image {
         display: none;
       }
