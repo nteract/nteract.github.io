@@ -5,10 +5,12 @@
     &.mobile-only {
       width: 100%;
       margin: $unit*2 0;
+      margin-left:0 !important;
       padding: 0;
-      display: flex;
+      display: flex !important;
       flex-direction: row;
       justify-content: space-between;
+
     }
   }
   [class*="button__primary"] {
@@ -23,8 +25,10 @@
     color: white;
     text-decoration: none;
     @include handheld {
-      max-width: 48%;
-      margin: 0;
+      //max-width: 48%;
+      max-width:calc(50% - 10px);
+      margin: 0 !important;
+      flex: 1 1 calc(50% - 20px);
     }
     .wrapper--button {
       display: flex;
