@@ -487,8 +487,9 @@ main.page {
     .buttons.mobile-only {
       width: 100%;
       margin: 20px 0;
+      margin-left: 0 !important;
       padding: 0;
-      display: flex;
+      display: flex !important;
       flex-direction: row;
       justify-content: space-between; } }
   .buttons [class*="button__primary"] {
@@ -504,8 +505,9 @@ main.page {
     text-decoration: none; }
     @media (max-width: 767px) {
       .buttons [class*="button__primary"] {
-        max-width: 48%;
-        margin: 0; } }
+        max-width: calc(50% - 10px);
+        margin: 0 !important;
+        flex: 1 1 calc(50% - 20px); } }
     .buttons [class*="button__primary"] .wrapper--button {
       display: flex;
       align-items: center; }
@@ -676,6 +678,10 @@ nav {
   position: relative;
   z-index: 99; }
 
+@media (max-width: 1023px) {
+  body {
+    overflow-x: hidden; } }
+
 a {
   color: #f02563;
   text-decoration: none; }
@@ -724,7 +730,7 @@ section.hero {
         left: inherit !important;
         bottom: 0 !important;
         top: inherit !important; } }
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       section.hero .hero--fun .video {
         max-width: 100%;
         display: none !important; } }
@@ -747,7 +753,9 @@ section.hero {
     margin: 0 auto;
     align-items: flex-end;
     justify-content: space-between;
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    z-index: 99; }
     section.hero .wrapper--section .application-image {
       display: none; }
     @media (max-width: 1023px) {

@@ -125,7 +125,7 @@
            class="layer">
       <div class="video--wrap animate--video">
         <div class="video layer" data-depth="0.30">
-          <video id="background_video" poster="./assets/images/nteract_app_demo@2x.png" preload="auto" loop="loop" autoplay="true">
+          <video id="background_video" poster="./assets/images/nteract_app_demo@2x.png" preload="auto" loop="loop" autoplay="true" muted="true" >
             <source src="./assets/images/video/nteract_app_demo@2x.mp4" type="video/mp4">
             <source src="./assets/images/video/nteract_app_demo@2x.webm" type="video/webm">
           </video>
@@ -139,8 +139,8 @@
         Take your computing experience to the next level.
       </h1>
       <p>nteract is a desktop application that allows you to develop rich documents that contain prose, executable
-        code, and images. Whether you're a developer, data scientist, researcher, or journalist, nteract helps you
-        writing your next code-driven story.</p>
+        code (in almost any language!), and images. Whether you're a developer, data scientist, researcher, or journalist, nteract helps you
+        write your next code-driven story.</p>
       <div class="buttons not-mobile">
         <a class="button__primary--gradient" href="https://github.com/nteract/nteract/releases" target="_blank">
           <div class="wrapper--button">
@@ -326,6 +326,14 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/js/jquery.parallax.js"></script>
     <script src="./assets/javascript/index.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-83956887-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
