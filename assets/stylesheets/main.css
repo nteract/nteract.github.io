@@ -760,8 +760,7 @@ section.hero {
       display: none; }
     @media (max-width: 1023px) {
       section.hero .wrapper--section {
-        -ms-grid-row-align: center;
-            align-items: center;
+        align-items: center;
         flex-direction: column;
         margin-top: 105px; }
         section.hero .wrapper--section .application-image {
