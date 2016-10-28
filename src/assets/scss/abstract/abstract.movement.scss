@@ -139,11 +139,3 @@ $animate--time-base: 2s;
   animation: fadeInUp $animate--time-base/1.5 forwards cubic-bezier(0.19, 1, 0.22, 1);
   animation-delay: $animate--time-base/2.8;
 }
-
-.animate-first-block {
-  @include desktop {
-    opacity: 0;
-    animation: fadeInUp-v 0.65s forwards ease-in-out;
-    animation-delay: $animate--time-base/1.2;
-  }
-}
