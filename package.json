@@ -8,6 +8,7 @@
     "email": "aulneau@ineffable.co"
   },
   "scripts": {
+    "serve": "gulp",
     "build": "gulp build",
     "predeploy": "npm run build",
     "deploy": "node deploy.js"
