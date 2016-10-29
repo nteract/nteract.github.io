@@ -1,10 +1,12 @@
-language: ruby
-rvm:
-  - 2.2
+language: node_js
+node_js:
+  - "6"
 before_install:
-  - npm install
+  - rvm install 2.2.2
+  - gem install bundler
+  - bundle install
   - pip install --user pillow
-install: bundle install
+install: npm install
 script: npm run build
 env:
   global:
