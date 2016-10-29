@@ -1,5 +1,7 @@
 # nteract landing page
 
+[![Build Status](https://travis-ci.org/nteract/nteract.github.io.svg?branch=dev)](https://travis-ci.org/nteract/nteract.github.io)
+
 ## Updating
 
 This repo is running a stack that combines jekyll, gulp and sass.
