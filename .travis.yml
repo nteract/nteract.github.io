@@ -11,5 +11,6 @@ script: npm run build
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - secure: nk2ojoKiiYaQzy1CvDbVVFducB4rCPrC9Cvd6e6YpEkLi8DaOzrNw7h4n8bwvAfAagRmvMNKlH16eccwg6EuN1BlOE8FKCfmje9wmUYRnr2UkzbqQ3KLol7t304AA/6ZUyuPCdmTq40Yq0WsKTtzMUrbcSrSUWtl4nw9kDcQxQ0SU+8RnCl7DpfqNzmGng2VBFokX/l4NJbjkR+MvAct6pc+HTMx1W6oq1gkQLlLd8/dyeObl6JFYivisMXDd+Ovr52WjoRLcCocVZNkVFgVm0Yd5IXZDZlhh6S7yjOUd2MszE3c4XVrynUMj7I0dbg56kgytCgNDS3RYijx4W1+pu4YO2Ppv39LPXyJFOX0QIjN76kD6qECopP0P1+6ZxB4kAH7FIs/hdWrm9ulJE4YLDNtmvpSIFG4lGKdvhMq+CAjcbZ3Zy8gKLA7FiotwWENIKDCdFyyK7Jgogbsc7RvLMVB7RX4I4Md0e7yNwaBtrhmPEfa83c4b8IwaRpEOPXV2AiPAjYm2RPFQdozHRkF/mPXD0pFMOMFUYnuceqU0kGUO7Is3lTfJD0hZPJEHj1Zcv0le1Pw3i1PmYh90tEuw4X44oy79MurdnPeESD1UAB7vghPLg/iexSdOUtP+u3QgUMn4AQcUAJCy/OfNI8Tu09vDWKeRwzBI/URAbrA/J0=
 
 after_success: if [[ $TRAVIS_PULL_REQUEST == false && $TRAVIS_BRANCH == dev ]]; then npm run deploy; fi
