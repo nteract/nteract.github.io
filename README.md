@@ -25,6 +25,4 @@ To build just run `npm run build`. That will generate the jeykll site to the `/d
 
 ## Deploy
 
-After building and when you're happy with things run `git subtree push --prefix dist origin master`
-
-######Last updated 06.08.16
+Deploys are automatically executed by Travis.
