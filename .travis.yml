@@ -12,7 +12,4 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
-after_success:
-    if [ "$TRAVIS_PULL_REQUEST" == "false" -o "$TRAVIS_BRANCH" == "dev" ]; then
-        npm deploy
-    fi
+after_success: if [[ $TRAVIS_PULL_REQUEST == false && $TRAVIS_BRANCH == dev ]]; then npm deploy; fi
