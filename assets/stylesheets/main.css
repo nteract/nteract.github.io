@@ -475,12 +475,6 @@ main.page {
   animation: fadeInUp 1.3333333333s forwards cubic-bezier(0.19, 1, 0.22, 1);
   animation-delay: 0.7142857143s; }
 
-@media (min-width: 1024px) {
-  .animate-first-block {
-    opacity: 0;
-    animation: fadeInUp-v 0.65s forwards ease-in-out;
-    animation-delay: 1.6666666667s; } }
-
 .buttons {
   padding: 0 0 10px 0; }
   @media (max-width: 767px) {
