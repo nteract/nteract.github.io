@@ -666,7 +666,7 @@ nav {
       max-width: 150px;
       padding: 20px; }
       .footer--main .logos ul li img {
-        max-width: 100%; }
+        width: 100%; }
 
 .page--body {
   position: relative;
