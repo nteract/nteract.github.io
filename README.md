@@ -1,5 +1,7 @@
 # nteract landing page
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nteract/nteract.github.io.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/nteract/nteract.github.io.svg?branch=dev)](https://travis-ci.org/nteract/nteract.github.io)
 
 ## Updating
