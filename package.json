@@ -8,7 +8,12 @@
     "email": "rgbkrk@gmail.com"
   },
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "next": "^1.2.3"
   }
 }
