@@ -7,8 +7,10 @@ const $ = require('jquery');
 global.$ = $;
 global.jQuery = $;
 
+
 export default class App extends React.Component {
   componentDidMount() {
+    require('jquery-parallax');
     $(document).ready(function () {
 
       function checkHeaderLocation() {
