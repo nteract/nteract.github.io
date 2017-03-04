@@ -148,6 +148,7 @@ section {
         }
         @include tablet {
           padding: 0 $unit*4;
+          max-width: 100%;
         }
         @include tablet {
         }

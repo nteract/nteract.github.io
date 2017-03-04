@@ -3,7 +3,7 @@
 
   @include handheld {
     &.mobile-only {
-      width: 100%;
+      width: 75%;
       margin: $unit*2 0;
       margin-left:0 !important;
       padding: 0;
