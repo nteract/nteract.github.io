@@ -479,7 +479,7 @@ main.page {
   padding: 0 0 10px 0; }
   @media (max-width: 767px) {
     .buttons.mobile-only {
-      width: 100%;
+      width: 75%;
       margin: 20px 0;
       margin-left: 0 !important;
       padding: 0;
@@ -780,7 +780,8 @@ section.hero {
         padding: 40px 0; } }
     @media (max-width: 1023px) {
       section.hero .wrapper--section article.content {
-        padding: 0 40px; } }
+        padding: 0 40px;
+        max-width: 100%; } }
     section.hero .wrapper--section article.content .supplemental {
       color: #c8d4e5;
       font-size: 0.85rem; }
