@@ -1,3 +1,3 @@
-# nteract landing page
+# nteract landing page (DEPRECATED)
 
-The main site is now at [nteract.io](https://nteract.io) and there's a [GitHub repository you can contribute to](https://github.com/nteract/nteract.io).
+The main site is now at [nteract.io](https://nteract.io). Please visit https://github.com/nteract/nteract.io, our GitHub repository for the **nteract.io** site.
